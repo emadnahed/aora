@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
     marginTop: 6,
     marginLeft: 24,
   },
-});
+})
