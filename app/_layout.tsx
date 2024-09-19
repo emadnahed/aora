@@ -6,6 +6,8 @@ import "../global.css"
 import { useFonts } from 'expo-font';
 
 
+SplashScreen.preventAutoHideAsync();
+
 export default function RootLayout() {
   const [fontsLoaded, error] = useFonts({
     "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
@@ -27,6 +29,7 @@ export default function RootLayout() {
     }
   }, [fontsLoaded, error]);
 
+
   if (!fontsLoaded && !error) {
     return null;
   }
@@ -34,6 +37,7 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
     </Stack>
   )
 }

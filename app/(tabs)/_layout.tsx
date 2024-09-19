@@ -4,12 +4,14 @@ import { Image, Text, View } from "react-native";
 
 import { icons } from "../../constants";
 
+
+// component created to render the tab icons in the tabs.
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className="flex items-center justify-center gap-2">
+    <View className="items-center justify-center gap-2">
       <Image
         source={icon}
-        resizeMode="contain"
+        // resizeMode="contain"
         tintColor={color}
         className="w-6 h-6"
       />
